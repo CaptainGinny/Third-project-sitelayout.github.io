@@ -1,0 +1,386 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: #f6f6f6;
+    padding: 22px 0;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container a {
+    color: #000;
+    font-size: 16px;
+    margin-right: 63px;
+    padding: 27px 6px;
+}
+
+.header-container a:hover {
+    background: #ffea00;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+ul {
+    display: flex;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+
+.top-slide {
+    background: url(img/slider_bg.jpg) no-repeat;
+    padding-top: 120px;
+    padding-bottom: 280px;
+}
+
+.top-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.top-slide h2 {
+    background: #ffea00;
+    display: inline;
+    font-size: 70px;
+    padding: 0 13px;
+}
+
+.top-slide :nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.top-slide p {
+    background: #414146;
+    color: #fff;
+    display: inline;
+    font-size: 24px;
+    padding: 0 13px;
+}
+
+
+.specialize-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.specialize-container h3 {
+    font-size: 35px;
+}
+
+.specialize-container p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+
+
+.first-p {
+    font-size: 20px;
+    top: -30px;
+    color: #fff; 
+}
+
+.bottom-card {
+    background: #414146;
+    position: relative;
+}
+
+.specialize-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.portfolio {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio h4 {
+    background: #424147;
+    padding: 0 8px;
+    font-size: 18px;
+    display: inline-block;
+    color: #ffea00;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+.portfolio p {
+    color: #424146;
+    font-size: 16px;
+}
+
+
+
+.toggles button {
+    background-color: white; /*я добавил, фонило серым цветом*/
+    border: none;
+    color: #424146;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 5px;
+}
+
+.toggles button:after {
+    content: ' / ';
+}
+
+.toggles button:last-child:after {
+    content: '';
+}
+
+
+
+.posts {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+}
+
+.posts img {
+    width: 100%;
+}
+
+.brend-slider {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.brend-slider h4 {
+    margin-top: 40px;
+    background: #424147;
+    padding: 0 8px;
+    font-size: 18px;
+    display: inline-block;
+    color: #ffea00;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+.brend-slider p {
+    color: #424146;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+footer {
+    background: #414146;
+    padding: 30px 0;
+    color: #fff;
+}
+
+.footer h4 {
+    font-size: 18px;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 30% 20%;
+    grid-column-gap: 3%;
+}
+
+.footer-container .about-us a {
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ffea00;
+    display: inline-block;
+}
+
+.images {
+    margin-top: 10px;
+}
+
+.tweets p {
+    margin-top: 20px;
+}
+
+.tweets span {
+    color: #ffea00;
+}
+
+.social {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.img {
+    display: flex;
+    align-items: auto;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+@media screen and ( max-width: 760px ) {
+    .header-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main-menu {
+        display: none;
+    }
+
+    .main-menu li {
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+
+    .main-menu a {
+        display: block;
+        padding: 8px;
+    }
+
+    .toggle-button {
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: #000;
+        margin-top: 20px;
+    }
+
+    .toggle-button:after {
+        content: attr(data-open);
+        display: block;
+    }
+
+    #menu-checkbox:checked + nav[role="navigation"] .main-menu {
+        display: block;
+    }
+
+    #menu-checkbox:checked + nav[role="navigation"] .toggle-button::after {
+        content: attr(data-close);
+    }
+
+    .header-container a {
+        margin-right: -65px;
+    }
+
+    .main-menu {
+        position: relative;
+        top: 30px;
+        right: 115px;
+    }
+
+    .top-slide {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .top-slide h2 {
+        font-size: 35px;
+    }
+
+    .top-slide p {
+        font-size: 16px;
+    }
+
+    .specialize-container {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .specialize-container h3 {
+        font-size: 30px;
+    }
+
+    .specialize-container p {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .specialize-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bottom-card {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .posts {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 1em;
+    }
+
+    .toggles button {
+        background-color: white;
+        border: none;
+        color: #424146;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 4px 1px;
+    }
+
+    .portfolio h4 {
+        background: #424147;
+        padding: 0 8px;
+        font-size: 30px;
+        display: inline-block;
+        color: #ffea00;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .portfolio p {
+        color: #424146;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
