@@ -53,7 +53,9 @@ nav {
 
 
 .top-slide {
-    background: url(img/slider_bg.jpg) no-repeat;
+    background-image: url(img/slider_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 120px;
     padding-bottom: 280px;
 }
@@ -256,8 +258,9 @@ footer {
 
 
 
+    
 
-@media screen and ( max-width: 760px ) {
+@media screen and ( max-width: 1200px ) {
     .header-container {
         width: 100%;
         display: flex;
@@ -382,5 +385,9 @@ footer {
         color: #424146;
         font-size: 16px;
         margin-bottom: 15px;
+    }
+    .img {
+        display: flex;
+        display: inline-table;
     }
 }
